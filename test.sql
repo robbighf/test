@@ -1,7 +1,7 @@
 Select
  pic_content,
  pic_visual,
- pic_dm,
+ --pic_dm,
  Coalesce(
 	(case when acquisition_by like '%hospital%' then 'Hospital'
 		when acquisition_by='program_acquisition' OR (acquisition_by='zakat_acquisition' AND campaigner_full_name like '%Kitabisa%') OR ((campaigner_full_name='Peduli Anak Foundation' OR campaigner_full_name='RQV Indonesia') AND date_id <= '2021-03-31') OR (campaigner_full_name='UNHCR Indonesia' OR campaigner_full_name='Yayasan Bina Mulia Bojonegoro') OR ((campaigner_full_name like '%an Ash-Shalihin%' OR campaigner_full_name='Pondok Sedekah Indonesia' OR campaigner_full_name='Pondok Sedekah Sulsel') AND date_id <= '2021-01-31') THEN 'Program, Zakat, & NGO non-Region'
