@@ -1,6 +1,6 @@
 Select
  pic_content,
- pic_visual,
+ --pic_visual,
  --pic_dm,
  Coalesce(
 	(case when acquisition_by like '%hospital%' then 'Hospital'
